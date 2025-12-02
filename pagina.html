@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Controle de Tarefas</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container" id="pagina-lista">
+    <h1>Lista de Tarefas</h1>
+    <button id="btnNovaTarefa">Cadastrar Nova Tarefa</button>
+    <div id="tabelaTarefas"></div>
+  </div>
+  
+  <div class="container" id="pagina-cadastro" style="display:none;">
+    <h1>Cadastrar Nova Tarefa</h1>
+    <form id="formTarefa">
+      <label>Prioridade: <span class="obrigatorio">*</span></label>
+      <select name="prioridade" required>
+        <option value="">Selecione</option>
+        <option value="Baixa">Baixa</option>
+        <option value="Normal">Normal</option>
+        <option value="Urgente">Urgente</option>
+      </select>
+
+      <label>Descrição: <span class="obrigatorio">*</span></label>
+      <input type="text" name="descricao" required>
+
+      <label>Local: <span class="obrigatorio">*</span></label>
+      <input type="text" name="local" required>
+
+      <label>Recursos Necessários:</label>
+      <div class="recursos">
+        <input type="text" id="recursoInput" placeholder="Digite um recurso">
+        <button type="button" id="btnAddRecurso">Adicionar</button>
+      </div>
+      <ul id="listaRecursos"></ul>
+
+      <label>Data Limite: <span class="obrigatorio">*</span></label>
+      <input type="datetime-local" name="dataLimite" required>
+
+      <label>Matrícula: <span class="obrigatorio">*</span></label>
+      <input type="number" name="matricula" required>
+
+      <div class="botoes-form">
+        <button type="submit">Salvar Tarefa</button>
+        <button type="button" id="btnVoltarLista">Voltar à Lista</button>
+      </div>
+      <div id="mensagemErro" class="erro"></div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html

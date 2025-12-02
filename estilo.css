@@ -1,0 +1,189 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(140deg, #cfd9df 0%, #e2ebf0 100%);
+  color: #2F3545;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 570px;
+  margin: 36px auto;
+  background: #fff;
+  padding: 32px 30px 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px 0 #d9deea;
+  animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: none;}
+}
+
+h1 {
+  text-align: center;
+  color: #4563bb;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+label {
+  font-weight: 500;
+  margin: 17px 0 7px;
+  display: block;
+  color: #3a4376;
+  letter-spacing: 0.2px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+select {
+  width: 98%;
+  font-size: 1rem;
+  padding: 10px;
+  margin-bottom: 9px;
+  border: 1px solid #ced6ea;
+  border-radius: 7px;
+  background: #f7f9fc;
+  transition: border 0.2s;
+}
+
+input:focus, select:focus {
+  border-color: #5678e3;
+  outline: none;
+}
+
+.botoes-form {
+  margin-top: 22px;
+}
+
+button {
+  padding: 9px 20px;
+  margin-right: 9px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background: linear-gradient(95deg, #5e7be7 45%, #a9c1ff 110%);
+  color: #fff;
+  border: none;
+  border-radius: 35px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 2px #e2eaf6;
+  transition: background 0.22s, transform 0.24s;
+}
+button:hover {
+  background: linear-gradient(95deg, #3353c3 45%, #92b8fa 110%);
+  transform: scale(1.07);
+}
+
+.obrigatorio {
+  color: #d12b2b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 22px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f9f9fb;
+  box-shadow: 0 1px 7px #ebedf5;
+}
+
+th, td {
+  border: none;
+  border-bottom: 1px solid #eef2fa;
+  padding: 10px 8px;
+  text-align: left;
+}
+
+th {
+  background: #f1f5fc;
+  color: #5e7be7;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1rem;
+}
+
+ul {
+  margin-top: 7px;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.urgente {
+  color: #d12b2b;
+  font-weight: bold;
+  text-shadow: 0 0 1px #e4e4e4;
+}
+
+.erro {
+  color: #d12b2b;
+  margin-top: 11px;
+  font-size: 0.98em;
+  background: #fbe4e7;
+  border-radius: 7px;
+  padding: 3px 12px;
+  display: inline-block;
+}
+
+/* Botão de cadastrar nova tarefa MODERNO e destacado */
+#btnNovaTarefa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px auto 0 auto;
+  font-size: 1.09rem;
+  font-weight: 600;
+  background: linear-gradient(95deg, #57b2fb 30%, #4577e8 82%);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 40px;
+  box-shadow: 0 2px 8px #e2eaf6;
+  border: none;
+  transition: background 0.22s, transform 0.17s;
+  cursor: pointer;
+}
+
+#btnNovaTarefa::before {
+  content: "+";
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-right: 2px;
+  color: #fff;
+}
+
+#btnNovaTarefa:hover {
+  background: linear-gradient(90deg, #4577e8 15%, #57b2fb 100%);
+  transform: scale(1.055);
+}
+
+.recursos {
+  display: flex;
+  gap: 8px;
+}
+
+#recursoInput {
+  flex: 1;
+}
+
+#listaRecursos li {
+  background: #eaf2fa;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 3px 6px 3px 0;
+  padding: 5px 9px;
+  color: #4563bb;
+  font-size: 0.98em;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .container { max-width: 98vw; padding: 12px 6vw;}
+  table, th, td { font-size: 0.97em;}
+  #btnNovaTarefa { font-size: 1em;}
+}
